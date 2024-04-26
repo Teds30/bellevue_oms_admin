@@ -1,0 +1,142 @@
+.title-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.table-container {
+    display: flex;
+    flex-direction: column;
+    align-self: stretch;
+
+    padding: 12px 0;
+    border-radius: 12px;
+    gap: 12px;
+
+    background-color: var(--bg-layer1);
+}
+
+.add-container {
+    display: flex;
+    flex-direction: column;
+    gap: 2em;
+    padding: 24px;
+}
+
+.filter-container {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    padding: 0 12px;
+    gap: 12px;
+}
+
+.filter-container span {
+    color: #222736;
+}
+
+.search-box {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    padding: 0 12px;
+    gap: 12px;
+    background: white;
+}
+
+table {
+    align-self: stretch;
+    border-collapse: collapse;
+}
+
+thead {
+    background-color: #fafafa;
+    align-self: stretch;
+}
+
+th {
+    font-weight: 500;
+    font-size: 0.9em;
+    padding: 12px;
+}
+
+tbody {
+    padding: 0 12px;
+}
+
+td {
+    text-align: center;
+    padding: 12px;
+    background-color: var(--bg-layer1);
+    border-bottom: 1px solid var(--border-color);
+    color: var(--fc-strong);
+}
+
+.td-center {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 12px;
+}
+
+td {
+    max-width: 150px;
+}
+
+td.title {
+    text-align: left;
+}
+
+.td-icon-container {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+
+.td-icon-action {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: var(--bg-layer1);
+    border-radius: 16px;
+    padding: 1em;
+    height: fit-content;
+    color: var(--fc-body-light);
+    transition: 0.2s;
+}
+
+.td-details {
+    padding: 0;
+}
+
+.rotate {
+    transform: rotate(90deg);
+    transition: 0.2s;
+}
+
+.td-icon {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 32px;
+}
+.td-icon span {
+    border: 1px solid var(--border-color);
+    border-radius: 8px;
+    padding: 10px;
+
+    color: var(--fc-body);
+}
+.td-icon svg {
+    width: 32px;
+    height: 32px;
+}
+
+.vl {
+    margin: 18px;
+    width: 1px;
+
+    align-self: stretch;
+    border-left: 1px solid var(--border-color);
+}
