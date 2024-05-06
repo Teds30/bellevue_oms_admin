@@ -154,4 +154,15 @@ export const permissionsData = [
         code: 403,
         name: 'can_view_all_department_metrics',
     },
+
+    /*
+    @
+    @
+    @
+    */
+
+    {
+        code: 501,
+        name: 'can_view_reports_page',
+    },
 ]

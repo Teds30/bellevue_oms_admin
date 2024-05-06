@@ -47,6 +47,9 @@ const PermissionsList = (props) => {
     const metricsPermissions = permissionsData.filter(
         (permission) => permission.code >= 401 && permission.code <= 499
     )
+    const reportsPermissions = permissionsData.filter(
+        (permission) => permission.code >= 501 && permission.code <= 599
+    )
 
     // Function to check if access code exists in permissions array
     const checkAccessCode = (accessCode) => {
@@ -90,6 +93,7 @@ const PermissionsList = (props) => {
                         <Tab label="Projects" value={1} />
                         <Tab label="Department" value={2} />
                         <Tab label="Metrics" value={3} />
+                        <Tab label="Reports" value={4} />
                     </TabList>
                 </Box>
                 <TabPanel
@@ -215,6 +219,44 @@ const PermissionsList = (props) => {
                     <div className={styles['permission-container']}>
                         {currentPerm &&
                             metricsPermissions.map((perm, index) => {
+                                return (
+                                    <div
+                                        className={`${styles['permission']}`}
+                                        key={index}
+                                    >
+                                        <FormControlLabel
+                                            sx={{ color: 'var(--fc-body)' }}
+                                            control={
+                                                <Checkbox
+                                                    checked={checkAccessCode(
+                                                        perm.code
+                                                    )}
+                                                    style={{
+                                                        color: 'var(--accent)',
+                                                    }}
+                                                />
+                                            }
+                                            onChange={(e) => {
+                                                checkSave(perm.code, e)
+                                            }}
+                                            label={perm.name}
+                                        />
+                                        {/* <p className="title">{perm.code}</p> */}
+                                        {/* <p>{perm.name}</p> */}
+                                    </div>
+                                )
+                            })}
+                    </div>
+                </TabPanel>
+                <TabPanel
+                    value={4}
+                    sx={{ padding: '0', width: '100%', maxWidth: '500px' }}
+                >
+                    <h4>Reports Permission</h4>
+
+                    <div className={styles['permission-container']}>
+                        {currentPerm &&
+                            reportsPermissions.map((perm, index) => {
                                 return (
                                     <div
                                         className={`${styles['permission']}`}
